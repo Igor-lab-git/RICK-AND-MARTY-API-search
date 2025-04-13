@@ -16,7 +16,7 @@ const getAllCharacter = async () => {
 };
 
 
-const dysplayCharacter = (characters) => {
+const renderCharacter = (characters) => {
   characterCard.innerHTML = ``;
   if(characters) {
     characters.forEach((character) => {
@@ -54,14 +54,14 @@ const getFillterCharacter = async () => {
 
   const response = await getAllCharacter();
   
-  dysplayCharacter(response.results);
+  renderCharacter(response.results);
   inputElement.addEventListener('input', (event) => {
     const filtredCharacter = filtrCharacterByName(response.results, event.target.value)
-    dysplayCharacter(filtredCharacter);
+    renderCharacter(filtredCharacter);
   });
 }
 
 getFillterCharacter()
 .catch(error => {
-  console.error(error)
+  console.error('Error requetion: ', error)
 })
