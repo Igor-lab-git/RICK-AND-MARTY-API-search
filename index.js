@@ -52,7 +52,8 @@ const filtrCharacterByName = (characters, name) => {
 
 const getFillterCharacter = async () => {
 
-  const response = await getAllCharacter()
+  const response = await getAllCharacter();
+  
   dysplayCharacter(response.results);
   inputElement.addEventListener('input', (event) => {
     const filtredCharacter = filtrCharacterByName(response.results, event.target.value)

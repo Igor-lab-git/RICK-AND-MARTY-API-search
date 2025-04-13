@@ -1,11 +1,18 @@
-
+.header {
+  background: #36585c;
+  color: wheat;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .search_input {
   height: 30px;
   width: 250px;
   border-radius: 5px;
   border-color: blue;
 }
-.search_input:active{
+.search_input:active {
   border-radius: 5px;
   border-color: blue;
 }
@@ -20,7 +27,7 @@
   display: flex;
   justify-content: center;
 }
-.character_wrapper{
+.character_wrapper {
   display: flex;
   max-width: 1400px;
   flex-wrap: wrap;
@@ -31,8 +38,8 @@
 
 .wrapper_card {
   border: 1px solid #f54303;
-    padding: 4px;
-    border-radius: 5px;
+  padding: 4px;
+  border-radius: 5px;
 }
 
 .title_character {
